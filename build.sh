@@ -1,7 +1,6 @@
-wget https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh
-chmod +x goinstall.sh
-mv goinstall.sh /tmp/goinstall.sh
-/tmp/goinstall.sh --64
+#credit for the golang installer goes to https://github.com/canha/golang-tools-install-script/
+#wget https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh
+./goinstall.sh --64
 
 source /root/.bashrc
 rm -rf $GOPATH/src/github.com
