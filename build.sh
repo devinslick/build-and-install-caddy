@@ -1,8 +1,12 @@
-#credit for the golang installer goes to https://github.com/canha/golang-tools-install-script/
-#wget https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh
-./goinstall.sh --64
+VERSION=$( go version )
+if [[ $VERSION =~ 1.9.5 ]];
+then
+    echo "You already have version 1.9.5 of Go."
+else
+    ./goinstall.sh --64
+    source /root/.bashrc
+fi
 
-source /root/.bashrc
 rm -rf $GOPATH/src/github.com
 #dependencies
 go get github.com/caddyserver/builds
